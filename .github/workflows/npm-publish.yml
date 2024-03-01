@@ -34,7 +34,3 @@ jobs:
           done
         env:
           NODE_AUTH_TOKEN: ${{secrets.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}}
-
-    # Tempatkan kunci cache di luar blok steps, sejajar dengan blok jobs
-    cache:
-      npm: true
