@@ -23,6 +23,8 @@ jobs:
 
       - name: Publish to NPM
         run: |
+          echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
+
           # Retry logic
           retries=3
           until [ $retries -le 0 ] || npm publish; do
@@ -32,6 +34,8 @@ jobs:
           done
         env:
           NODE_AUTH_TOKEN: ${{secrets.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}}
-        cache:
-          directories:
-            - node_modules
+    
+    # Tempatkan kunci cache di luar blok steps, sejajar dengan blok steps
+    cache:
+      directories:
+        - node_modules
