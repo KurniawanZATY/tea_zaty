@@ -1,0 +1,25 @@
+{
+  "name": "tea_zaty",
+  "version": "1.0.0",
+  "description": "A simple tea-related package",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KurniawanZATY/tea_zaty.git"
+  },
+  "keywords": ["tea", "beverage"],
+  "author": "Kurniawan ZATY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KurniawanZATY/tea_zaty/issues"
+  },
+  "homepage": "https://github.com/KurniawanZATY/tea_zaty",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "chalk": "^4.1.1"
+  }
+}
