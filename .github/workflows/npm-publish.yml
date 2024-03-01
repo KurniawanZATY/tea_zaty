@@ -23,7 +23,15 @@ jobs:
 
       - name: Publish to NPM
         run: |
-          echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
-          npm publish
+          # Retry logic
+          retries=3
+          until [ $retries -le 0 ] || npm publish; do
+            echo "Retrying npm publish..."
+            sleep 60  # Tambahkan delay 60 detik sebelum mencoba lagi
+            ((retries--))
+          done
         env:
-          NODE_AUTH_TOKEN: ${{secrets.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}}
+          NODE_AUTH_TOKEN: ${{secrets.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}}
+        cache:
+          directories:
+            - node_modules
