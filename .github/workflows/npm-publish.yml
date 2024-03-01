@@ -26,4 +26,4 @@ jobs:
           echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
           npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.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}}
+          NODE_AUTH_TOKEN: ${{secrets.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}}
